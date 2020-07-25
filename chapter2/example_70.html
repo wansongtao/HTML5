@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chapter 2</title>
+    <script src="../source/js/jQuery/jquery-3.5.1.js"></script>
+    <script>
+        /*function makePhrases() {
+            var words1 = ["24/7", "multi-Tier", "30,000 foot", "B-to-B", "win-win"];
+            var words2 = ["empowered", "value-added", "oriented", "focused", "aligned"];
+            var words3 = ["process", "solution", "tipping-point", "strategy", "vision"];
+
+            //Math.floor() 向下取整，Math.random() 产生一个0-1之间的随机数
+            var rand1 = Math.floor(Math.random() * words1.length);
+            var rand2 = Math.floor(Math.random() * words2.length);
+            var rand3 = Math.floor(Math.random() * words3.length);
+
+            var phrase = words1[rand1] + " " + words2[rand2] + " " + words3[rand3];
+            var phraseElement = document.getElementById("phrase");
+            phraseElement.innerHTML = phrase;
+        }
+
+        //必须等网页全部加载完成后，才能执行代码，且只能执行一次否则会覆盖上一次
+        window.onload = makePhrases;
+        */
+
+        // $(function () {
+        //     //DOM树加载完成之后，再运行里面的js代码（jQuery简写法）
+        // });
+
+        $(document).ready(function () {//DOM树加载完成之后，再运行里面的js代码（jQuery写法）
+
+            var words1 = ["24/7", "multi-Tier", "30,000 foot", "B-to-B", "win-win"];
+            var words2 = ["empowered", "value-added", "oriented", "focused", "aligned"];
+            var words3 = ["process", "solution", "tipping-point", "strategy", "vision"];
+
+            //Math.floor() 向下取整，Math.random() 产生一个0-1之间的随机数
+            var rand1 = Math.floor(Math.random() * words1.length);
+            var rand2 = Math.floor(Math.random() * words2.length);
+            var rand3 = Math.floor(Math.random() * words3.length);
+
+            var phrase = words1[rand1] + " " + words2[rand2] + " " + words3[rand3];
+            
+            //设置所选元素的文本内容
+            $("#phrase").text(phrase);
+        });
+    </script>
+</head>
+<body>
+    <h1>Phrase-o-Matic says:</h1>
+    <p id="phrase"></p>
+</body>
+</html>
