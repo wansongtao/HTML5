@@ -6,7 +6,7 @@ function save(item) {
     playlistArray.push(item);
 
     //将playlist = JSON.stringify(playlistArray)存储到本地
-    //JSON.stringify()将json格式的数据转换为字符串
+    //JSON.stringify()将playlistArray数组转换为json串格式
     localStorage.setItem("playlist", JSON.stringify(playlistArray));
 }
 
@@ -37,7 +37,7 @@ function getStoreArray(key) {
         playlistArray = new Array();
     }
     else {
-        //JSON.parse() 将字符串转换为json格式
+        //JSON.parse() 将json格式串转换为一个json对象
         playlistArray = JSON.parse(playlistArray);
     }
     return playlistArray;
