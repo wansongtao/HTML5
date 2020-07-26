@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>构造函数和对象</title>
+    <script>
+        function Movie (title, genre, rating, showtimes){
+            this.title = title;
+            this.genre = genre;
+            this.rating = rating;
+            this.showtimes = showtimes;
+            this.getNextShowing = function () {
+                var now = new Date().getTime();
+
+                for(var i = 0; i < this.showtimes.length; i++){
+                    //getTimeFromString()这个函数不能用
+                    var showtime = getTimeFromString(this.showtimes[i]);
+
+                    if((showtime-now) > 0){
+                        return "Next showing of " + this.title + " is " + this.showtimes[i];
+                    }
+                }
+            }
+        };
+
+        var myFavoriteMovie = new Movie("肖申克的救赎", "励志片", 5, ["3:00pm","7:00pm", "9:00pm"]);
+
+        var showtime = myFavoriteMovie.getNextShowing();
+
+        alert(showtime);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
