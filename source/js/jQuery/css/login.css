@@ -1,0 +1,10 @@
+body {
+    background: rgb(185, 126, 126);
+}
+
+#huoying {
+    width: 700px;
+    height: 400px;
+    margin: 50px auto;
+    position: relative;
+}
