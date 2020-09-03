@@ -4,21 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>服务器连接测试</title>
-    <script src="/source/js/jQuery/jquery-3.5.1.js"></script>
+    <script src="source/js/jQuery/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="source/css/login.css">
 </head>
 <body>
+    <header class="header">
+        <h1>欢迎来到我的测试服务器</h1>
+    </header>
     <div id="huoying">
-        <img src="/source/images/sm.jpg" alt="波风水门">
-        <img src="/source/images/my12.jpg" alt="宇智波鼬">
-        <img src="/source/images/mr.jpg" alt="日向雏田">
-        <img src="/source/images/hhh.jpg" alt="漩涡鸣人">
+        <img src="source/images/sm.jpg" alt="火影忍者">
+        <img src="source/images/my12.jpg" alt="火影忍者">
+        <img src="source/images/mr.jpg" alt="火影忍者">
+        <img src="source/images/hhh.jpg" alt="火影忍者">
+        <img src="source/images/my12xq.jpg" alt="火影忍者">
+        <img src="source/images/shuimen.jpg" alt="火影忍者">
+        <img src="source/images/ws.jpg" alt="火影忍者">
+        <img src="source/images/xq.jpg" alt="火影忍者">
 
         <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
+            <li class="hot">一</li>
+            <li>二</li>
+            <li>三</li>
+            <li>四</li>
+            <li>五</li>
+            <li>六</li>
+            <li>七</li>
+            <li>八</li>
         </ul>
     </div>
+
+    <p>
+        无论此刻的你，正在经历什么，但愿你心中，始终怀有对抗生活的勇气，“且视他人之疑目如盏盏灯火，大胆地去走你的夜路”，独立而坚强，知足且上进。
+    </p>
+
+    <p>
+        我希望，大家无论通过什么方法，都能赚到足够的钱，去旅行，去闲着，去思考世界的过去和未来，去看书做梦，去街角闲逛，让思绪的钓线深深沉入街流之中。
+    </p>
+
+    <script>
+        $(document).ready(function (){
+            var button = $("#huoying ul li");
+            var num = 0;
+            var myTime = null;
+
+            //$("#one").text("1");
+
+            button.hover(function() {
+                clearInterval(myTime);
+
+                //给鼠标悬停的li元素添加样式，其他的兄弟li移除样式
+                $(this).addClass("hot").siblings().removeClass("hot");
+
+                //获取当前悬停的li元素序列号
+                num = $(this).index();
+
+                //显示当前序列号的照片，隐藏其他照片
+                $("#huoying img").eq(num).show().siblings("img").hide();
+            }, function() {
+                //鼠标离开运行该函数
+               auto(); 
+            });
+
+            function auto(){
+                myTime = setInterval(function() {
+                    num++;
+
+                    if(num > button.length){
+                        num = 0;
+                    }
+
+                    //指定按钮li添加样式其它的删除样式
+                    button.eq(num).addClass("hot").siblings().removeClass("hot");
+
+                    //指定序列号的图片显示，其它图片隐藏
+                    $("#huoying img").eq(num).show().siblings("img").hide();
+                }, 3000);
+            }
+
+            auto();
+        });
+        
+    </script>
 </body>
 </html>

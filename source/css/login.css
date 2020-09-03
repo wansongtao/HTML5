@@ -1,0 +1,54 @@
+body {
+    background: rgb(204, 211, 141);
+    margin: 0 auto;
+}
+
+header {
+    /* width: 700px; */
+    margin: 10px auto;
+    color: red;
+    font: "宋体", "楷体", sans-serif;
+    text-align: center;
+}
+
+#huoying {
+    width: 700px;
+    height: 400px;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+ul {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    list-style: none;
+}
+
+ul li {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #fff;
+    float: left;
+    background: red;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.hot {
+    background: green;
+}
+
+p {
+    text-align: left;
+    text-indent: 2em;
+    width: 680px;
+    margin: 20px auto;
+    padding: 0 10px;
+    font-weight: bold;
+}
