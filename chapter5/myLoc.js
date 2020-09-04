@@ -1,5 +1,5 @@
 window.onload = getMyLocation;
-
+//谷歌浏览器不允许获取用户的地理位置
 function getMyLocation() {
     //检查浏览器是否支持地理定位api
     if(navigator.geolocation) {
@@ -13,8 +13,8 @@ function getMyLocation() {
 //调用displayLocation时，地理定位API向它传入一个position对象，其中包含有关浏览器位置的信息，包括一个有纬度和经度的coordinates对象
 function displayLocaltion(position) {
     //coords包含指向coordinates对象的一个引用
-    var latitude = position.coords.latitude;  //获取经度
-    var longitude = position.coords.longitude;  //获取纬度
+    var latitude = position.coords.latitude;  //获取纬度
+    var longitude = position.coords.longitude;  //获取经度
 
     var div = document.getElementById("location");
     div.innerHTML = "You are at Latitude: " + latitude + ", Longitude: " + longitude;

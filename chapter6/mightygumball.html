@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mighty Gumball (JSON)</title>
-    <script src="mightygumball.js"></script>
     <link rel="stylesheet" href="mightygumball.css">
+    <script src="mightygumball.js"></script>
 </head>
 <body>
     <h1>Mighty Gumball Sales</h1>
@@ -15,5 +15,14 @@
     </div>
 
     <p id="luck"></p>
+
+    <!-- jsonp跨域请求数据，
+        同时指定回调函数为我们本地的updateSales函数 
+        这个web服务会把json包装在updateSales函数调用中
+        回调函数updateSales必须放在js文件的最外层
+    -->
+    
+    <!-- <script src="http://gumball.wickedlysmart.com?callback=updateSales"></script> -->
+    
 </body>
 </html>
