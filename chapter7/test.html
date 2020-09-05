@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>画布初体验</title>
+    <style>
+        /* 在css中指定画布的大小，会缩放画布，建议在标记属性里指定。 */
+        canvas {
+            margin: 0 auto;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <!-- 一个页面可以有多个画布 -->
+    <!-- 在css中指定画布的大小，会缩放画布，建议在标记属性里指定。 -->
+    <canvas id="lookwhatIdrew" width="600" height="200">
+        Hey you, yes YOU, upgrade your browser!!
+    </canvas>
+
+    <script>
+        window.onload = function() {
+            var canvas = document.getElementById("lookwhatIdrew");
+
+            //请求画布提供一个可绘制的上下文，这里明确指出需要一个2d上下文
+            var context = canvas.getContext("2d");
+
+            //在上下文上调用fillRect（）方法，这个方法会创建一个矩形
+            context.fillRect(10, 10, 100, 100);
+            //conText是与画布关联的一个对象，它定义了一组属性和方法，可以用来在画布上进行绘制。
+        };
+    </script>
+</body>
+</html>

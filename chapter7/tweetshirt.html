@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TweetShirt</title>
+    <style>
+        canvas {
+            border: 1px solid #000;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>TweetShirt</h1>
+    <canvas id="tshirtCanvas" width="800" height="800"></canvas>
+    <form action="">
+        <p>
+            <label for="backgroundColor">Select background color: </label>
+            <select name="" id="backgroundColor">
+                <option value="white" selected>White</option>
+                <option value="black">Black</option>
+                <option value="pink">pink</option>
+                <option value="orange">orange</option>
+            </select>
+        </p>
+        <p>
+            <label for="shape">Circles or squares?</label>
+            <select name="" id="shape">
+                <option value="none" selected>Neither</option>
+                <option value="circles">Circles</option>
+                <option value="squares">Squares</option>
+                <option value="triangle">Triangle</option>
+            </select>
+        </p>
+        <p>
+            <label for="foregroundColor">Select text color: </label>
+            <select name="" id="foregroundColor">
+                <option value="black" selected>Black</option>
+                <option value="white">White</option>
+                <option value="red">Red</option>
+            </select>
+        </p>
+        <p>
+            <label for="tweets">Pick a tweet:</label>
+            <select name="" id="tweets">
+                <option value="失败并不可拍，害怕失败才真正可拍">失败并不可拍，害怕失败才真正可拍</option>
+                <option value="只要有可能会出错，就一定会出错" selected>只要有可能会出错，就一定会出错</option>
+            </select>
+        </p>
+        <p>
+            <input type="button" id="previewButton" value="Preview">
+        </p>
+    </form>
+
+    <script src="tweetshirt.js"></script>
+    <!-- 通过jsonp获取数据  回调函数updateTweets -->
+    <!-- <script src="http://twitter.com/statuses/user_timeline/wansongtao.json?callback=updateTweets"></script> -->
+
+    <!-- <script src="http://chenmengsi.com/chapter7/tweet.js?callback=updateTweets"></script> -->
+</body>
+</html>
+

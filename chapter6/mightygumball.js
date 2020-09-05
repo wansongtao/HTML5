@@ -1,6 +1,12 @@
+/**
+* @description 保存获取到的数据里的时间
+*/
+var lastReportTime = 0;
 
 //我们需要把数据放在一个服务器上，这样XMLHttpRequest才能使用HTTP协议获取数据
 window.onload = function () {
+    
+
     try {
         //跨域要使用jsonp  
         //var url = "http://localhost/chapter6/sales.json";
@@ -55,7 +61,8 @@ window.onload = function () {
              */
             try{
                 //跨域的URL地址，后面添加的一个随机时间是为了避免浏览器缓存文件
-                var url = "http://gumball.wickedlysmart.com?callback=updateSalesTest&random=" + (new Date()).getTime();
+                var url = "http://gumball.wickedlysmart.com?callback=updateSalesTest&lastreporttime="
+                 + lastReportTime + "&random=" + (new Date()).getTime();
 
                 var newScriptElement = document.createElement("script");
                 newScriptElement.setAttribute("src", url);
@@ -101,6 +108,10 @@ function updateSalesTest(responseText) {
 
             //将这个div添加到页面中
             salesDiv.appendChild(div);
+        }
+
+        if (responseText.length > 0) {
+            lastReportTime = responseText[responseText.length - 1].time;
         }
     }
     catch(ex) {

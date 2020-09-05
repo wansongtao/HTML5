@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>画布练习(矩形、圆、三角形、图片、文本)</title>
+    <style>
+        canvas {
+            margin: 0 auto;
+            border: 2px solid orange;
+        }
+        form {
+            margin: 0 auto;
+            width: 800px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="800" height="600">请升级您的浏览器！</canvas>
+    <form action="">
+        <p>
+            <label for="bgColor">backgroundColor: </label>
+            <select name="" id="bgColor">
+                <option value="black" selected>Black</option>
+                <option value="white">White</option>
+                <option value="orange">Orange</option>
+            </select>
+        </p>
+        <p>
+            <label for="shape">Shape: </label>
+            <select name="" id="shape">
+                <option value="square">Square</option>
+                <option value="triangle">Triangle</option>
+                <option value="circle">Circle</option>
+                <option value="smileface" selected>Smileface</option>
+            </select>
+        </p>
+        <p>
+            <label for="textColor">textColor: </label>
+            <select name="" id="textColor">
+                <option value="black" selected>Black</option>
+                <option value="red">Red</option>
+                <option value="orange">Orange</option>
+            </select>
+        </p>
+        <p>
+            <label for="text">text: </label>
+            <select name="" id="text">
+                <option value="失败并不可拍，害怕失败才真正可拍">失败并不可拍，害怕失败才真正可拍</option>
+                <option value="只要有可能会出错，就一定会出错" selected>只要有可能会出错，就一定会出错</option>
+            </select>
+        </p>
+        <p>
+            <input type="button" id="preview" value="preview">
+        </p>
+    </form>
+
+    <script src="myCanvas.js"></script>
+</body>
+</html>
