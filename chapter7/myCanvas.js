@@ -24,6 +24,7 @@ window.onload = function() {
             drawlogo(myCanvas, context);
             drawShape(myCanvas, context);
             drawText(myCanvas, context);
+            //makeImage(myCanvas);
         }
         catch(ex) {
             alert(ex.message);
@@ -191,4 +192,16 @@ window.onload = function() {
             context.drawImage(myImg, 0, 0, 100, 100);
         }
     }
+
+    /**
+     * @description 点击画布创建一个图像
+     * @param {*} myCanvas 
+     */
+    // function makeImage(myCanvas) {
+    //     myCanvas.onclick = function() {
+    //         //window.location将浏览器窗口设置为所生成的这个图像
+    //         //要求画布创建一个png图像
+    //         window.location = myCanvas.toDataURL("../uploads/png");
+    //     }
+    // }
 };
